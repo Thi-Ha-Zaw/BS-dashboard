@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+
+$primary:rgb(97, 97, 97);
+$light:rgb(248, 248, 249);
+$white:#fff;
+$info: #4650dd;
+$danger:#aab1ff;
+$warning:#cfe2ff;
+$success:#0d6efd;
+
+$font-family-sans-serif:'Roboto Condensed', sans-serif;
+$navbar-padding-y : 1.5rem;
+
+$dropdown-item-padding-y:10px;
+
+$card-border-radius:1rem;
+$card-border-width:0px;
+
+$accordion-border-width:0px!important;
+$accordion-button-active-bg:#5096ff; 
+$accordion-button-active-color:#fbfbfb; 
+
+
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+@import "./node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+@import "./node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+.SideBar{
+    .SideList{
+        list-style-type: none;
+        padding-left: 0;
+        .SideBarLink{
+            text-decoration: none;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .SideBarLink:hover{
+            background-color: #5096ff;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .Side-label{
+            font-size: 20px;
+        }
+        
+    }
+    
+}
+
+.multi-collapse{
+    .accordion-list-item:hover{
+        background-color: rgb(238, 238, 238);
+    }
+}
+
+.accordion-list{
+    list-style-type: none;
+    padding-left: 0;
+    .accordion-anchor{
+        text-decoration: none;
+        width: 100%;
+        display: block;
+        transition: 0.3s;
+    }
+}
+    
+
+
+.icon-font{
+    font-size: 25px!important;
+}
+
+
+
+
+@include media-breakpoint-down(lg) {
+    .SideBar{
+        width: 300px;
+        position: fixed;
+        z-index: 1500;
+        transform: translateX(-300px);
+        transition: 0.3s;
+
+        &.show{
+            transform: translateX(0px);
+           
+        }
+    }
+
+}
+
+.bg-green{
+    background-color: #d7f0dd!important;
+}
+
+.text-green{
+    color: #35b653!important;
+}
+
+.text-p{
+    color: #dc3545!important;;
+}
+
+.bg-s{
+    background-color: #f8d7da!important;
+}
+
+.profile-img{
+    width: 50px;
+    height: 50px;
+    // border: 3px solid rgb(241, 241, 241);
+    border-radius: 50%;
+    object-fit: cover!important;
+    object-position: top;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;
+}
+
+.Arrow-up{
+    transform: rotate(180deg)!important;
+}
+
+.mt-80{
+    margin-top: 80px;
+}
+
+.card-height-one{
+    height: 95vh;
+}
+
+.card-height-two{
+    height: 95vh;
+}
+
+@include media-breakpoint-down(lg) { 
+    .card-height-one{
+        height: 85vh;
+    }
+    .card-height-two{
+        height: 50vh;
+        margin-top: 20px;
+    }
+ }
+
+
